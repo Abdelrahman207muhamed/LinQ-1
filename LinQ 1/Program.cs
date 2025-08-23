@@ -1,16 +1,18 @@
-﻿using static LinQ_1.ListGenerator;
+﻿using System.Xml.Linq;
+using static LinQ_1.ListGenerator;
 namespace LinQ_1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //Implicitly-Type Local Variable [Var- Dynamic ]
+
+            #region Implicitly-Type Local Variable [Var- Dynamic ]
 
             #region Var
             // Var 
 
-           // var Dat01 = "Ahmed";
+            // var Dat01 = "Ahmed";
 
             //Compiler Can Detect The DataType Of The Local Variable Based On Initial Value ,At Compination Time 
             //Must BE Initialized
@@ -23,8 +25,8 @@ namespace LinQ_1
             #region Dynamic
             //Dynamic: Like Var in JS
 
-           // dynamic Data02 = null;
-           // Console.WriteLine(Data02.GetType().Name);//Exception [Runtime Binder  Exception ]
+            // dynamic Data02 = null;
+            // Console.WriteLine(Data02.GetType().Name);//Exception [Runtime Binder  Exception ]
 
             //CLR Detect The DataType Of The Local Variable Based On Last Value, At Runtime
             //Don'tNeed To Be Initialized
@@ -52,10 +54,43 @@ namespace LinQ_1
 
             #endregion
 
+            #endregion
+
+            #region Anonymous Type
+
+            //Employee E01= new Employee() {Id=1,Name="Ahmed",Salary=12000 } ;
+            // var E01 = new { Id = 1, Name = "Ahmed", Salary = 12000.0m };
+            // var E02 = new { Id = 2, Name = "Ahmed", Salary = 12000.0m };
+            //var E02 = E01 with { Id = 2 }; //New Feature C# 10.0
+
+            //E01.Id=12;//Invalid:Immutable Can't Change Its Value After Creation
+
+            //Console.WriteLine(E01.Name.GetHashCode()); // -1394292997
+            //Console.WriteLine(E02.Name.GetHashCode()); //-1394292997     
+            //The Same Anonymouse Type As Long As: 1.The Same Property Name [Case Sensitive] 
+            //                                     2.The Same Property Order
+            //                                     
+
+
+            //Console.WriteLine(E01);//{ Id = 1, Name = Ahmed, Salary = 12000.0 }
+            //Compiler Will Override On ToString
+            //Console.WriteLine(E01.GetHashCode);
+            //Console.WriteLine(E02.GetHashCode);
+
+            // if(E01.Equals(E02)) //Compiler Will Override on Equales(), GetHashCode()
+            //     Console.WriteLine("E01 == E02");
+            // else
+            //     Console.WriteLine("E01 !=E02");
+
+
+            #endregion
+
+
+            #region Extention Method
 
 
 
-
+            #endregion
 
 
 
