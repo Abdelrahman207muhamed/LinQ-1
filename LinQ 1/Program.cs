@@ -85,14 +85,136 @@ namespace LinQ_1
 
             #endregion
 
-
             #region Extention Method
+
+            // int Number = 12345;
+
+            //var result = IntExtention.Reverse(Number);//Class Method
+
+            // var result= Number.Reverse();//Extension Method
+
+            // Console.WriteLine(result);//54321
 
 
 
             #endregion
 
+            #region What Is LinQ
 
+            // LinQ1 : Language Integrate Query 
+            //       : 40+ Extension Method (LinQ Operator ) Against Any Data [Data in Sequence]
+            //       : Regardless Data Store
+            //       : 13 category
+            //       : LinQ Operator Exists in Built-in Class "Enumrable"
+
+
+            // Sequence : Object from Class Implement Interface "IEnumrable"
+
+            // Local Sequence : L2O , L2XML
+            // Remote Sequence: L2EF
+
+            // Input Sequence -> LinQ Operator -> Output Sequence
+            // Input Sequence -> LinQ Operator -> Output Sequence
+            //                -> LinQ Operator -> Output Sequence
+
+
+            // List<int> Number = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            // //var result = Enumerable.Where(Number, N => N % 2 == 0);
+            // //var result = Enumerable.Any(Number, N => N % 2 == 0);
+            // var result = Enumerable.Range(1,100);
+            //// Console.WriteLine(result);
+            // foreach (var item in result)
+            // {
+            //     Console.Write($"{item} ");
+            // }
+
+
+            #endregion
+
+            #region LinQ Syntax
+            // 1.Fluent Syntax 
+            // Use LinQ Method 
+            // 1.1 LinQ Operator as => Class Member Method Through Class "Enumerable" 
+
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var result = Enumerable.Where(Numbers, X => X % 2 == 0);
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            // 1.2 LinQ Operator as => Extension Method Through Sequence [Recommended]
+
+
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var result = Numbers.Where( X => X % 2 == 0);
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+
+            // 2.Query Syntax Like SQL Style
+            //Start -> From
+            //End   -> Select , Group By
+
+
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var result = from N in Numbers
+            //             where N % 2 == 0
+            //             select N;
+
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            #endregion
+
+            #region LinQ Excution Ways
+
+            //1.Differed Excution Way  : 10 Category
+            //2.Immediate Excution Way : 3 Category   [Elements Operator , Casting Operator , Aggregate Operator ]
+
+
+            //List<int> Number = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //var result =Number.Where( N => N % 2 == 0); // Differed
+
+            //Number.AddRange(new int[] { 11, 12, 13, 14, 15 });
+
+            //foreach (var item in result) //Here
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            //List<int> Number = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //var result = Number.Where(N => N % 2 == 0).ToList(); // Immediate
+
+            //Number.AddRange(new int[] { 11, 12, 13, 14, 15 });
+
+            //foreach (var item in result) 
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+
+            #endregion
+
+            #region Setup Data
+            // Console.WriteLine(ProductsList[0]);
+            // Console.WriteLine(CustomersList[0]);
+
+            // var result = ProductsList.Where(P => P.UnitsInStock == 0);
+            //// var result = CustomersList.Where(C=>C.City=="Berlin");
+
+            // foreach (var item in result)
+            // {
+            //     Console.WriteLine(item);
+            // }
+
+            #endregion
 
 
         }
